@@ -1,26 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftCamera1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-mL-ae0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtv-9l-4MC">
+                                <rect key="frame" x="32" y="28" width="76" height="30"/>
+                                <state key="normal" title="camera"/>
+                                <connections>
+                                    <action selector="chooseFromCamera" destination="BYZ-38-t0r" eventType="touchUpInside" id="FvO-IP-x7X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ana-G0-KUZ">
+                                <rect key="frame" x="178" y="28" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="FlT-II-UhC"/>
+                                </constraints>
+                                <state key="normal" title="photo library"/>
+                                <connections>
+                                    <action selector="chooseImageFromPhotoLibrary" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZS5-mf-ZZC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LOU-mL-ae0" secondAttribute="trailing" id="3sI-zx-D7C"/>
+                            <constraint firstItem="rtv-9l-4MC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="KDp-9A-cls"/>
+                            <constraint firstItem="LOU-mL-ae0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KXA-PF-BlV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ana-G0-KUZ" secondAttribute="trailing" constant="34" id="LjN-hk-NXo"/>
+                            <constraint firstItem="LOU-mL-ae0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lt4-83-C7t"/>
+                            <constraint firstItem="ana-G0-KUZ" firstAttribute="leading" secondItem="rtv-9l-4MC" secondAttribute="trailing" constant="70" id="b5x-8O-gxD"/>
+                            <constraint firstItem="ana-G0-KUZ" firstAttribute="baseline" secondItem="rtv-9l-4MC" secondAttribute="baseline" id="myp-W1-WHl"/>
+                            <constraint firstItem="ana-G0-KUZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="pFh-SN-1BB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LOU-mL-ae0" secondAttribute="bottom" id="tUo-91-Hzo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="LOU-mL-ae0" id="Loh-cL-yYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
         </scene>
     </scenes>
 </document>
