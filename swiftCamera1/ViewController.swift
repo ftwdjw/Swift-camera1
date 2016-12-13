@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {//begin
     
+    let parkingPic = UIImage.init(named: "Parking")!
+    
     @IBOutlet var imageView: UIImageView!
     
     
@@ -17,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {//begin
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        imageView.image = parkingPic
         
         
         
@@ -30,17 +32,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }//end
     
     @IBAction func chooseImageFromPhotoLibrary() {
-        let picker = UIImagePickerController()
+        let image = UIImagePickerController()
         
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        present(picker, animated: true, completion: nil)
+        image.delegate = self
+        image.sourceType = .photoLibrary
+        present(image, animated: true, completion: {self.done()})
+        
         
         print("choose existing photo")
     }
     
     
     @IBAction func chooseFromCamera(){
+        //initialize UIImagePickerController
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .camera
@@ -52,11 +56,53 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//        
+//        
+//        //save image
+//        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+//
+//        
+//        //let imageSave : UIImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+//        
+//        func UIImageWriteToSavedPhotosAlbum(_ image: "parkingPic", _ completionTarget: Any?, _ completionSelector: Selector?, _ contextInfo: UnsafeMutableRawPointer?)
+//        {
+//            
+//        }
+//        
+//        
+//        dismiss(animated: true, completion: nil)
+//     
+//    }
+    
+//    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : Any]) {
+//        
+//        let theInfo:NSDictionary = info as NSDictionary
+//        
+//        let img:UIImage = (theInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage?)!
+//        
+//        imageView.image=img
+//        
+//        self.dismiss(animated: true, completion: nil)
+//        
+//    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // The info dictionary contains multiple representations of the image, and this uses the original.
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        // Set photoImageView to display the selected image.
+        imageView.image = selectedImage
+        
+        // Dismiss the picker.
         dismiss(animated: true, completion: nil)
-     
+    }
+    
+    
+    
+    
+    func done(){
+        print("this is a test")
     }
     
     

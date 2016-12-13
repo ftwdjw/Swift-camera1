@@ -13,6 +13,7 @@
 		1B78EA891DFB292900A94333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B78EA871DFB292900A94333 /* LaunchScreen.storyboard */; };
 		1B78EA931DFB295B00A94333 /* REadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1B78EA921DFB295B00A94333 /* REadMe.rtf */; };
 		1B78EA951DFB2AA500A94333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B78EA941DFB2AA500A94333 /* ViewController.swift */; };
+		1BC138031DFDCF7F00A79C8B /* Parking.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC138021DFDCF7F00A79C8B /* Parking.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B78EA8A1DFB292900A94333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B78EA921DFB295B00A94333 /* REadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = REadMe.rtf; sourceTree = "<group>"; };
 		1B78EA941DFB2AA500A94333 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BC138021DFDCF7F00A79C8B /* Parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Parking.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				1B78EA921DFB295B00A94333 /* REadMe.rtf */,
 				1B78EA941DFB2AA500A94333 /* ViewController.swift */,
 				1B78EA821DFB292900A94333 /* Main.storyboard */,
+				1BC138021DFDCF7F00A79C8B /* Parking.png */,
 				1B78EA851DFB292900A94333 /* Assets.xcassets */,
 				1B78EA871DFB292900A94333 /* LaunchScreen.storyboard */,
 				1B78EA8A1DFB292900A94333 /* Info.plist */,
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC138031DFDCF7F00A79C8B /* Parking.png in Resources */,
 				1B78EA891DFB292900A94333 /* LaunchScreen.storyboard in Resources */,
 				1B78EA861DFB292900A94333 /* Assets.xcassets in Resources */,
 				1B78EA931DFB295B00A94333 /* REadMe.rtf in Resources */,
@@ -304,6 +308,7 @@
 				1B78EA8F1DFB292900A94333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
